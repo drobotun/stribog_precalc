@@ -1,4 +1,4 @@
-#include <gost_3411_2012_calc.h>
+#include "gost_3411_2012_calc.h"
 
 //#define DEBUG_MODE
 
@@ -37,7 +37,7 @@ static void
 GOSTHashAdd512(const uint8_t *a, const uint8_t *b, uint8_t *c)
 {
     int i;
-    int internal = 0;
+    unsigned int internal = 0;
     for (i = 0; i < 64; i++)
     {
         internal = a[i] + b[i] + (internal >> 8);
